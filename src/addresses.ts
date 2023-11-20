@@ -10,6 +10,7 @@ type ChainAddresses = {
   nonfungiblePositionManagerAddress?: string
   tickLensAddress?: string
   swapRouter02Address?: string
+  swapRouter03Address?: string
   v1MixedRouteQuoterAddress?: string
 }
 
@@ -147,13 +148,14 @@ const BASE_GOERLI_ADDRESSES: ChainAddresses = {
 
 // Base Nebulas v3 addresses
 const U2U_NEBULAS_ADDRESSES: ChainAddresses = {
-  v3CoreFactoryAddress: '0x277a70C6Dce30690b2e14E5385dFF3623c190Ae5',
-  multicallAddress: '0x2753635AA05C6EbeB1ac7Fe7a83598a66Bd22608',
-  quoterAddress: '0xeb42A839eaa83f448fCeE9CEc9F3fD88aA4dAf71',
-  v3MigratorAddress: '0xDcf5186C3E9CCD885A4458AB746CE17136EE21F0',
-  nonfungiblePositionManagerAddress: '0xCf3116898252a20a60Da81d364FfEd207BAfF4d9',
-  tickLensAddress: '0x5Cc25EdFAEFD3991E91e5a7F2d22CF011A858820',
-  swapRouter02Address: '0x983f3402C6Ed65ff89B32DEcDaEC3A483cd67617'
+  v3CoreFactoryAddress: '0x51C491701db69F7A9C3DE3E877C7Bb372D8ebeB6',
+  multicallAddress: '0x5dEC41CD95e17a990BbeFC26a42E2b2D6092E213',
+  quoterAddress: '0xFa291739304e1395D54a69519019Bf818107EB2d',
+  v3MigratorAddress: '0x25B7D3C66227642ef7A27575937668E4F1946D03',
+  nonfungiblePositionManagerAddress: '0x8aBbb0628cD6c29c0C91773021B184E43BD7B996',
+  tickLensAddress: '0x494dB9DCb5B8eA993b396C78c797788278a0DAA1',
+  swapRouter02Address: '0xFB2Fb0EBf435672cBA6f1780C235Ea4eEFA30cBD',
+  swapRouter03Address: '0x51a6A6D3F696F0650E4c683d0B2d459ae96f02A4'
 }
 
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {

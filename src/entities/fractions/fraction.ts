@@ -25,7 +25,10 @@ export class Fraction {
   public readonly numerator: JSBI
   public readonly denominator: JSBI
 
-  public constructor(numerator: BigintIsh, denominator: BigintIsh = JSBI.BigInt(1)) {
+  public constructor(numerator: BigintIsh = JSBI.BigInt(0), denominator: BigintIsh = JSBI.BigInt(1)) {
+    console.log("🚀 ~ file: fraction.ts:29 ~ Fraction ~ constructor ~ denominator:", denominator)
+    console.log("🚀 ~ file: fraction.ts:29 ~ Fraction ~ constructor ~ numerator:", numerator)
+    
     this.numerator = JSBI.BigInt(numerator)
     this.denominator = JSBI.BigInt(denominator)
   }
@@ -35,6 +38,11 @@ export class Fraction {
       return new Fraction(fractionish)
 
     if ('numerator' in fractionish && 'denominator' in fractionish) return fractionish
+    const ZERO = JSBI.BigInt(0)
+    const isEqual = JSBI.equal(fractionish, ZERO)
+    if (isEqual) {
+      return new Fraction(fractionish)
+    }
     throw new Error('Could not parse fraction')
   }
 
